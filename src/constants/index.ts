@@ -26,7 +26,13 @@ export const navLinksdata = [
   },
   {
     _id: 1006,
+    title: "Blog",
+    link: "blog",
+  },
+  {
+    _id: 1007,
     title: "Contact",
     link: "contact",
   },
+  
 ];

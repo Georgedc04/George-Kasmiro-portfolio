@@ -12,6 +12,7 @@ import testimonialTwo from "./images/testmonial/testimonialTwo.png";
 import testimonialThree from "./images/testmonial/testimonialThree.png";
 import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
+import B1 from "./images/B1.png";
 
 export {
   logo,
@@ -28,4 +29,5 @@ export {
   at,
   mat,
   testimonialThree,
+  B1,
 };
