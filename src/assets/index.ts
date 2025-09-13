@@ -14,6 +14,7 @@ import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
 import B1 from "./images/B1.png";
 
+
 export {
   logo,
   bannerImg,

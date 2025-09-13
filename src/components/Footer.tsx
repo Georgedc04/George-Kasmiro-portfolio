@@ -3,13 +3,17 @@ import { logo } from "../assets";
 import { FadeIn } from "./FadeIn";
 
 const Footer = () => {
-  const renderLinks = (links: string[]) =>
+  // Quick navigation links
+  const renderLinks = (links: { name: string; href: string }[]) =>
     links.map((item, idx) => (
       <li key={idx}>
-        <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">
-          {item}
+        <a
+          href={item.href}
+          className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer"
+        >
+          {item.name}
           <span className="w-full h-[1px] bg-designColor inline-flex absolute left-0 -bottom-1 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
-        </span>
+        </a>
       </li>
     ));
 
@@ -55,7 +59,11 @@ const Footer = () => {
           Quick Links
         </h3>
         <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
-          {renderLinks(["About Me", "My Projects", "Services", "Testimonials", "Contact"])}
+          {renderLinks([
+            { name: "My Projects", href: "#projects" },
+            { name: "Services", href: "#services" },
+            { name: "Testimonials", href: "#testimonials" },
+          ])}
         </ul>
       </div>
 
@@ -74,11 +82,18 @@ const Footer = () => {
               Resume / CV
             </a>
           </li>
-          <li>Privacy Policy</li>
-          <li>Terms of Service</li>
+          <li>
+            <a href="/privacy-policy" className="hover:text-designColor duration-300">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/terms" className="hover:text-designColor duration-300">
+              Terms of Service
+            </a>
+          </li>
         </ul>
       </div>
-
 
       {/* Connect */}
       <div className="w-full h-full">
@@ -86,7 +101,11 @@ const Footer = () => {
           Connect
         </h3>
         <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
-          {renderLinks(["GitHub", "LinkedIn", "Portfolio Source Code", "Support", "Open Source Projects"])}
+          {renderLinks([
+            { name: "LinkedIn", href: "https://www.linkedin.com/in/george-kasmiro-2211a42b4" },
+            { name: "Portfolio Source Code", href: "https://github.com/Georgedc04/George-Kasmiro-portfolio.git" },
+            { name: "Support", href: "#contact" },
+          ])}
         </ul>
       </div>
     </FadeIn>
