@@ -18,10 +18,9 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm <span className="text-designColor capitalize">George Kasmiro</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
-           a<span>{text}</span>
-          <Cursor cursorStyle="|" cursorColor="#ff014f" />
-        </h2>
+         <div className=" min-w-[280px] h-20">
+            <h2 className="text-4xl font-bold text-white"> a<span>{text}</span> <Cursor cursorStyle="|" cursorColor="#ff014f" /> </h2>
+         </div>
         <p className="text-base font-bodyFont leading-6 tracking-wider">
           I'm a Computer Science engineer specializing in cybersecurity, passionate about building secure and efficient solutions. I enjoy solving problems, learning new tech, and creating projects that make a real impact.
         </p>
